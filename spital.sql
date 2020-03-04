@@ -163,18 +163,6 @@ insert into diagnostice values('TbEch','Tulburari de echilibru','vitD');
 insert into diagnostice values('TbCirc','Tulburari circulatorii','Ca');
 insert into diagnostice values('Rac','Raceala','Para');
 
-update medici 
-set varsta = 38
-where id_medic = 22;
-
-select pacienti.nume, pacienti.prenume
-from pacienti join medici using(id_medic) join sectii using(id_sectie)
-where pacienti.varsta > 30 and etaj = 5;
-
-select count(id_medic), id_sectie
-from medici join sectii using(id_sectie)
-group by id_sectie, etaj
-having etaj = 4;
 
 
 
